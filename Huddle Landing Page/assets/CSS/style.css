@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #674bb1;
+    display: grid;
+    place-items: center;
+}
+
+
+main {
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    padding: 64px 78px 0 78px;
+    display: flex;
+    z-index: 1000;
+    min-height: 800px;
+    background-image: url('../images/bg-desktop.svg');
+    background-repeat: no-repeat;
+    background-color: #674bb1;
+    box-shadow: 0 5px 20px #0000002d;
+}
+
+.area1,
+.area2{
+    flex: 1;
+    height: inherit;
+
+}
+
+.area2{
+    position: relative;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+}
+.logo img {
+    width: 199px;
+}
+
+.imagem-illustration {
+    width: 100%;
+    margin-top: 75px;
+}
+
+.imagem-illustration img{
+    width: 110%;
+}
+
+
+h1 {
+    padding-left: 120px;
+    margin-top: 185px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fffffa;
+}
+
+p{
+    margin-top: 41px;
+    padding-left: 120px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 250, 0.849);
+    letter-spacing: 0.4px;
+}
+.botao{
+    margin-left: 120px;
+    font-family: 'Poppins', sans-serif;
+    padding: 18px 65px;
+    background-color: #fffffa;
+    display: inline-block;
+    margin-top: 27px;
+    border-radius: 35px;
+    font-size: 1.2rem;
+    color: #674bb1;
+    box-shadow: 2px 8px 10px #0000002d;
+}
+
+.botao:hover {
+    background-color: #de8aff;
+    color: #fffffa;
+}
+
+
+.redes-sociais {
+    margin-top: 100px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.redes-sociais img {
+    width: 40px;
+    height: 40px;
+    margin-left: 17px;
+}
+
+
+
+
+
+
+@media (max-width:1600px){
+
+    main {
+        box-shadow: none;
+    }
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1280px){
+    main{
+        padding: 24px 78px;
+
+    }
+    h1 {
+        padding-left: 120px;
+        margin-top: 115px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #fffffa;
+    }
+    .area1,
+    .area2{
+        min-height: 700px;
+    }
+
+    .redes-sociais{
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+}
+
+
+@media ( max-width: 1024px){
+    
+    main {
+        background-size: cover;
+        background-position: bottom;
+    }
+    }
+
+
+@media (max-width: 1000px){
+
+    main {
+        min-height: 100vh;
+        background-size: cover;
+        background-position: top;
+    }
+    h1 {
+        margin-top: 90px;
+
+    }
+
+    .area1{
+        display: flex;
+        flex-direction: column;
+       
+    }
+    
+    .imagem-illustration {
+       margin-top: 40%;
+    }
+    .imagem-illustration img {
+        width: 120%;
+    }
+
+    .redes-sociais {
+        padding-left: 20px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+    .area1,
+    .area2{
+        min-height: 750px;
+    }
+    
+}
+
+
+
+
+@media (max-width: 847px){
+
+    h1 {
+
+        margin-top: 70px;
+
+    }
+    
+    .imagem-illustration {
+       margin-top: 55%;
+    }
+    .imagem-illustration img {
+        width: 130%;
+    }
+
+
+}
+
+
+
+
+@media (max-width: 750px) {
+   
+    main {
+        width: 100%;
+        padding: 74px;
+        
+        flex-direction: column;
+        background-image: url(../images/bg-mobile.svg);
+        background-size: 100%;
+        box-shadow: none;
+    }
+    .area1,
+    .area2{
+        min-height: 500px;
+        
+        
+    }
+    .area1 {
+        max-height: 610px;
+    }
+    .area2{
+        text-align: center;
+    }
+    .imagem-illustration {
+        width: 100%;
+        margin-top: 75px;
+    }
+    
+    .imagem-illustration img{
+        width: 100%;
+    }
+
+    h1,
+    p,
+    .redes-sociais{
+        padding-left: 0;
+    }
+    .redes-sociais img {
+        margin: 0px 15px;
+    }
+    .botao {
+        margin-left: 0;
+        margin-top: 60px;
+    }
+}
+
+
+
+@media (max-width: 640px) {
+    .area1 {
+        max-height: 510px;
+    }
+}
+
+
+
+
+@media (max-width: 504px){
+
+    h1{
+        font-size: 1.8rem;
+        margin-top: 85px;
+    }
+
+    p{
+        font-size: 1rem;
+        letter-spacing: 0.1px;
+        line-height: 1.5rem;
+        margin-top: 25px;
+    }
+
+    .botao{
+        margin-top: 30px;
+        font-size: 16px;
+        padding: 12px 69px;
+    }
+    .area1,
+    .area2{
+        min-height: 340px;
+        
+    }
+    
+    .area1 {
+        max-height: 401px;
+    }
+
+}
+
+
+
+
+@media (max-width: 464px){
+
+    main {
+        padding: 36px;
+    }
+   
+    .logo img{
+        width: 150px;
+    }
+
+    .imagem-illustration {
+        margin-top: 50px;
+    }
+
+    h1{
+        font-size: 1.5rem;
+        margin-top: 90px;
+    }
+
+    p{
+        font-size: 0.9rem;
+        letter-spacing: 0.1px;
+        line-height: 1.5rem;
+        margin-top: 25px;
+    }
+    .botao{
+        font-size: 14px;
+        padding: 10px 69px;
+    }
+
+    .area1,
+    .area2{
+        min-height: 340px;
+        
+    }
+
+    .area1 {
+        max-height: 341px;
+    }
+
+    .redes-sociais img {
+        margin: 0px 5px;
+        width: 30px;
+        height: 30px;
+        
+        
+    }
+}
+
+
+
+
+@media (max-width: 375px){
+
+    .area1,
+    .area2{
+        min-height: 300px;
+        
+        
+    }
+
+    .area1 {
+        max-height: 310px;
+    }
+
+    .logo img{
+        width: 150px;
+    }
+
+    .imagem-illustration {
+        margin-top: 50px;
+    }
+
+    h1{
+        font-size: 1.5rem;
+        margin-top: 75px;
+    }
+
+    p{
+        font-size: 0.9rem;
+        letter-spacing: 0.1px;
+        line-height: 1.5rem;
+        margin-top: 25px;
+    }
+    .botao{
+        font-size: 14px;
+        padding: 10px 69px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

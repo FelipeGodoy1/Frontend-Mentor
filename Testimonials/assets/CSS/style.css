@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;400;500;600&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: #edf2f8;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    padding: 0 24px;
+}
+
+.container { 
+    width: 100%;
+    max-width: 1110px; 
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px 30px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "area1 area1 area2 area3"
+      "area4 area5 area5 area3"
+      ". . . .";
+  }
+
+  .area1,
+  .area2,
+  .area3,
+  .area4,
+  .area5 {
+
+    padding: 24px 32px;
+    border-radius: 10px;
+    -webkit-box-shadow: 13px 16px 29px -14px rgba(113,119,153,0.36); 
+    box-shadow: 13px 16px 29px -14px rgba(113,119,153,0.36);
+  }
+
+
+  .area1 { 
+
+      grid-area: area1; 
+      background-color: #733fc8;
+      position: relative;
+      z-index: 2;
+      
+    }
+  
+  .area2 { 
+      grid-area: area2; 
+      background-color: #49556b;
+      
+    }
+  
+  .area3 { 
+      grid-area: area3;
+      background-color: #ffff;
+     
+      
+     }
+  
+  .area4 {
+       grid-area: area4; 
+       background-color: #ffff;
+       
+       
+    }
+  
+  .area5 { 
+      grid-area: area5; 
+      background-color: #18202d;
+    
+      
+    }
+  
+
+    .person{
+        width: 100%;
+        display: flex;
+    }
+
+    .avatar img {
+        border-radius: 100%;
+        width: 30px;
+        background-color: transparent;
+    }
+
+    .name {
+        padding-left: 17px;
+        font-size: 13px;
+    }
+
+    h2{
+        font-size: 1.17rem;
+        margin-top: 18px;
+        width: 100%;
+        letter-spacing: 0.5px;
+        line-height: 1.4rem;
+        
+    }
+    h3 {
+        font-weight: 400;
+    }
+
+    p{
+        margin-top: 20px;
+        font-size: 0.78rem;
+        font-weight: 400;
+        line-height: 1.2rem;
+        letter-spacing: 0.2px;
+    }
+    span {
+        font-weight: 500;
+        
+    }
+
+
+    .area1::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 80px;
+        width: 107px;
+        height: 105px;
+        background-image: url('../images/bg-pattern-quotation.svg');
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+    }
+
+
+    .area1 .avatar img {
+        border: 2px solid rgba(255, 255, 255, 0.521);
+    }
+    .area5 .avatar img {
+        border: 2px solid #733fc8;
+    }
+
+
+    .area2 h2,
+    .area1 h2 {
+        z-index: 1000;
+        color: rgba(255, 255, 255, 0.767);
+    }
+    
+    .area2 p,
+    .area1 p {
+        color: rgba(255, 255, 255, 0.452);
+    }
+
+
+    .area2 .name h3,
+    .area1 .name h3{
+        color: rgba(255, 255, 255, 0.719);
+    }
+
+
+    .area5 .name span,
+    .area2 .name span,
+    .area1 .name span {
+        color: rgba(255, 255, 255, 0.452);
+    }
+
+    .area5 h2 {
+        color: rgba(255, 255, 255, 0.884);
+    }
+    .area5 p {
+        color: rgba(255, 255, 255, 0.747);
+    }
+    .area5 .name h3 {
+        color: rgba(255, 255, 255, 0.884);
+    }
+ 
+    
+    .area3 h2,
+    .area4 h2 {
+        color: rgb(82, 82, 87);
+    }
+
+    .area3 p,
+    .area4 p {
+        color: rgb(146, 144, 144);
+    }
+
+    .area3 .name span,
+    .area4 .name span {
+        
+        color: rgb(167, 164, 164);
+    }
+
+    .area4 h2 {
+        padding-right: 10px;
+    }
+
+
+
+
+
+    @media (max-width: 968px) {
+
+        .container {  display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-auto-flow: row;
+            grid-template-areas:
+              "area1 area1 area2"
+              "area4 area5 area5"
+              "area3 area3 area3"
+
+          }
+          main {
+
+            padding: 24px;
+        }
+        .area4 h2 {
+            padding-right: 0;
+        }
+    
+    }
+
+
+
+
+    
+    @media (max-width: 475px ){
+
+        .container {  
+            padding:  0;
+            border-radius: 10px;
+            display: block;
+            
+          }
+       
+          main{
+            padding: 70px 24px;
+          }
+
+          .area1,
+          .area2,
+          .area3,
+          .area4 {
+            margin-bottom: 24px;
+          }
+        
+
+          h2{
+            font-size: 20px;
+            padding-right: 10px;
+            line-height: 1.7rem;
+        }
+
+        p{
+            line-height: 1.4rem;
+            font-size: 15px
+        }
+
+          .area1::before{
+            right: 20px;
+     
+        }
+    }

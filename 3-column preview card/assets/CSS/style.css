@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700&family=Lexend+Deca:wght@200;300;400&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/*
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif;
+*/
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: #f2f2f2;
+    padding: 24px;
+}
+
+.container {
+    width: 100%;
+    max-width: 920px;
+    display: flex;
+}
+
+.area1,
+.area2,
+.area3 {
+    flex: 1;
+    padding: 47px;
+    height: auto;
+
+}
+
+.area1 {
+    background-color: hsl(31, 77%, 52%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.area2 {
+    background-color: hsl(184, 100%, 22%);
+}
+.area3 {
+    background-color:  hsl(179, 100%, 13%);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+h2{
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: hsla(0, 0%, 100%, 0.849);
+    padding: 30px 0;
+}
+
+p {
+
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.7rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 69px;
+}
+
+
+.button {
+    font-family: 'Lexend Deca', sans-serif; 
+    font-size: 15px;
+    background-color: #f2f2f2;
+    padding: 13px 29px;
+    display: inline-block;
+    border-radius: 32px;
+    border: 2px solid #f2f2f2;
+}
+
+.button:hover{
+    border: 2px solid #f2f2f2;
+    background-color: transparent;
+    color: #f2f2f2;
+}
+
+.area1 a {
+    color: hsl(31, 77%, 52%);
+}
+
+.area2 a {
+    color: hsl(184, 100%, 22%);
+}
+
+.area3 a {
+    color: hsl(179, 100%, 13%);
+}
+
+
+
+@media (max-width: 970px){
+
+    main{
+        padding: 57px 24px;
+    }
+
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .area1,
+    .area2,
+    .area3 {
+        flex: none;
+        width: 50%;
+    
+    }
+
+    .area2 {
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .area3{
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 0;
+    }
+}
+
+
+@media (max-width: 590px){
+
+    main{
+        padding: 87px 24px;
+    }
+
+    .area1,
+    .area2,
+    .area3 {
+        flex: none;
+        width: 100%;
+        padding: 47px 47px 50px 47px;
+    
+    }
+
+    .area1 {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 10px;
+    }
+
+    .area2{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    p {
+
+        margin-bottom: 32px;
+    }
+
+}
