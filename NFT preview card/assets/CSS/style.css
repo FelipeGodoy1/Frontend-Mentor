@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #0D192B;
+    display: grid;
+    place-items: center;
+}
+
+.card{
+    width: 100%;
+    max-width: 350px;
+    height: 595px;
+    background-color: #15273f;
+    border-radius: 1rem;
+    box-shadow: 0px 19px 30px 17px rgb(9, 21, 39);
+    display:flex;
+    flex-direction: column;
+    padding: 23px;
+}
+
+.card .img {
+    position: relative;
+}
+
+.card .img img{
+    border-radius: 10px;
+    width: 100%;
+}
+
+.active {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 303px;
+    background-color: #00fff781;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.35s;
+    display: grid;
+    place-items: center;
+}
+
+.active .view {
+    max-width: 50px;
+}
+
+.card .img:hover .active {
+    opacity: 1;
+    transition: all 0.35s;
+}
+
+.card h2 {
+    color: #ffff;
+    /*padding: 1.15rem 0;*/
+    margin: 20px 0 16px;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.card p {
+    color: #8aa1c4;
+    font-weight: 200;
+    font-size: 1.14rem;
+    padding-bottom: 22px;
+    line-height: 1.7rem;
+}
+
+.card .info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #354458;
+    padding-bottom: 22px;
+}
+
+.info .eth {
+    font-size: 1.06rem;
+    color: #00FFF8;
+}
+
+.info .time {
+    font-size: 1rem;
+    color: #8BACD9;
+}
+
+.info .time i {
+   font-size: 0.9rem;
+   padding-right: 5px;
+}
+
+.card .credits {
+    width: 100%;
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    color: #8BACD9;
+}
+
+.card .credits a {
+    padding-left: 5px;
+    color: #ffff;
+}
+
+.credits .avatar {
+    width: 35px;
+    height: 35px;
+    border: 2px solid #bbb;
+    border-radius: 18px;
+    margin-right: 18px;
+}
+
+.credits .avatar img {
+    width: 100%;
+}
+
+.card h2:hover,
+.card .credits a:hover {
+
+    color: #00FFF8;
+}
+
+@media (max-width: 375px) {
+    body {
+        padding:10px;
+    }
+}

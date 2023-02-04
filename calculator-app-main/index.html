@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Calculator app</title>
+  <link rel="stylesheet" href="assets/CSS/style.css">
+</head>
+<body class="">
+  <main>
+    <div class="themes">
+      <h1>calc</h1>
+
+      <div class="themes-toggle">
+        <div class="numbers">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+        </div>
+        <div class="toggle">
+          <span data-set = "0" class="circle active"></span>
+          <span data-set = "1" class="circle"></span>
+          <span data-set = "2" class="circle"></span>
+        </div>
+      </div>
+    </div>
+    <div class="display">0</div>
+    <div class="container-buttons">
+        <button id="reset">RESET</button>
+        <button id="equal">=</button>
+        <button id="delete">DEL</button>
+        <button class="botao operator" id="more" value=" + ">+</button>
+        <button class="botao operator" id="less" value=" - ">-</button>
+        <button class="botao operator" id="multiplication" value=" * ">x</button>
+        <button class="botao operator" id="division" value=" / ">/</button>
+        <button class="botao" id="dot" value=".">.</button>
+        <button class="botao" id="button-0" value="0">0</button>
+        <button class="botao" id="button-1" value="1">1</button>
+        <button class="botao" id="button-2" value="2">2</button>
+        <button class="botao" id="button-3" value="3">3</button>
+        <button class="botao" id="button-4" value="4">4</button>
+        <button class="botao" id="button-5" value="5">5</button>
+        <button class="botao" id="button-6" value="6">6</button>
+        <button class="botao" id="button-7" value="7">7</button>
+        <button class="botao" id="button-8" value="8">8</button>
+        <button class="botao" id="button-9" value="9">9</button>
+    </div>
+  </main>
+  <script src="assets/JS/theme.js"></script>
+  <script src="assets/JS/app.js"></script>
+</body>
+</html>

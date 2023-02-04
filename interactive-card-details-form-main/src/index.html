@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon-32x32.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <main>
+      <div class="background-cards">
+        <div class="container-cards">
+          <div class="card-back">
+            <div class="content">
+              <span class="cvc-number" id="cvc-number-output">000</span>
+            </div>
+          </div>
+          <div class="card-front">
+            <div class="logo">
+              <img src="./images/card-logo.svg" alt="logo-card"/>
+            </div>
+            <div class="number-date">
+              <div class="card-number" id="card-number-output">
+                0000 0000 0000 0000
+              </div>
+              <div class="name-date">
+                <span class="name" id="card-name-output">JANE APPLESEED</span>
+                <div class="data">
+                  <span id="card-month-output">00</span>
+                  <span>/</span>
+                  <span id="card-year-output">00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-form">
+        <form action="">
+          <label for="cardholder-name" id="label-name">
+            <span>CARDHOLDER NAME</span>
+            <input
+              type="text"
+              id="cardholder-name-input"
+              name="cardholder-name"
+              placeholder="e.g. Jane Appleseed"
+            />
+            <span class="message-error hide">Can't be blank</span>
+          </label>
+
+          <label for="card-number" id="label-number">
+            <span>CARD NUMBER</span>
+            <input
+              type="text"
+              id="card-number-input"
+              name="card-number"
+              placeholder="e.g. 1234 5678 9123 0000"
+            />
+            <span class="message-error hide">Wrong format, numbers only</span>
+          </label>
+
+          <label for="mm-yy-cvc" class="flex">
+            <div class="mm-yy" id="month-year">
+              <span class="areaSpan">EXP.DATE (MM-YY)</span>
+              
+              <div class="mm input1">
+                <input
+                  type="text"
+                  name="mm-yy-cvc"
+                  placeholder="MM"
+                  id="month-input"
+                />
+              </div>
+              <div class="yy input2">
+                <input
+                  type="text"
+                  name="mm-yy-cvc"
+                  placeholder="YY"
+                  id="year-input"
+                />
+              </div>
+              <span class="message-error hide">Can't be blank</span>
+            </div>
+
+            <div class="cvc" id="cvc-card">
+              <span>CVC</span>
+              <input
+                type="text"
+                name="mm-yy-cvc"
+                placeholder="e.g. 123"
+                id="cvc-input"
+              />
+              <span class="message-error hide">Can't be blank</span>
+            </div>
+          </label>
+          <button type="submit">Confirm</button>
+        </form>
+
+        <div class="complete-state hide">
+          <img src="./images/icon-complete.svg" alt="complete">
+          <h1>THANK YOU !</h1>
+          <h2>We've added you card details</h2>
+          <button>Continue</button>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="./JS/main.js"></script>
+  </body>
+</html>

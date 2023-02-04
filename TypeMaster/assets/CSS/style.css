@@ -1,0 +1,495 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap");
+
+:root {
+  --primary-color: #f16718;
+  --primary-color-light: #ff9b62;
+  --secondary-color: #162542;
+  --secondary-color-light: #969daf;
+  --secondary-color-text: #8493a6;
+  --main-grey: #e8eff2;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  width: min(100%, 1440px);
+  margin: auto;
+}
+
+.link {
+  text-transform: uppercase;
+  font-size: 1.06rem;
+  letter-spacing: -0.4px;
+  padding: 20px 26px;
+  border-radius: 10px;
+}
+
+header {
+  padding: 54px 164px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link-header {
+  background-color: var(--main-grey);
+  color: var(--secondary-color);
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.link-header:hover {
+  background-color: var(--secondary-color);
+  color: var(--main-grey);
+  transition: all 0.3s;
+}
+
+.hero {
+  padding: 30px 164px;
+  display: grid;
+  grid-template-columns: 1.053fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "area1 area2";
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  right: 0;
+  height: 240px;
+  width: 134px;
+  background-color: var(--main-grey);
+  border-radius: 20px 0 0 20px;
+}
+
+.hero-content {
+  grid-area: area1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 8rem;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--secondary-color);
+}
+
+.hero-content p {
+  font-size: 1.12rem;
+  font-weight: 500;
+  color: var(--secondary-color-text);
+  line-height: 1.6rem;
+  padding: 24px 0 40px 0;
+  letter-spacing: 0.05px;
+}
+
+.links-hero {
+  margin-bottom: 3rem;
+  display: flex;
+}
+
+.link-hero {
+  background-color: var(--primary-color);
+  color: rgba(255, 255, 255, 0.815);
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.link-hero:hover {
+  background-color: var(--primary-color-light);
+  transition: all 0.3s;
+}
+
+.release {
+  color: var(--secondary-color-text);
+  font-weight: 600;
+  margin-left: 14px;
+}
+
+.hero-image {
+  height: 480px;
+  background-image: url("../images/desktop/image-keyboard.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  grid-area: area2;
+}
+
+.information {
+  height: auto;
+  padding: 0 164px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.12fr 1.953fr 1.54fr;
+  grid-template-rows: 1fr;
+  gap: 0 30px;
+  grid-template-areas: "info1 info2 info3";
+}
+
+.information::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 240px;
+  width: 134px;
+  background-color: var(--main-grey);
+  border-radius: 0 20px 20px 0;
+}
+
+.information-image-orange {
+  grid-area: info1;
+  background-image: url("../images/desktop/img-phone.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  height: 480px;
+}
+
+.information-image-center {
+  grid-area: info2;
+  background-image: url("../images/desktop/image-glass-and-keyboard.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+
+.information-text {
+  grid-area: info3;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 6rem;
+}
+
+.information-text h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  padding-top: 8px;
+  margin-bottom: 28px;
+  line-height: 2.2rem;
+  color: var(--secondary-color);
+}
+
+.information-text p {
+  padding-right: 10px;
+  font-size: 1.01rem;
+  font-weight: 500;
+  color: var(--secondary-color-text);
+  line-height: 1.6rem;
+}
+
+.cards-keyboard {
+  padding: 169px 164px 135px;
+  display: grid;
+  gap: 0 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "card1 card2 card3 card4";
+}
+
+.card1 {
+  grid-area: card1;
+}
+.card2 {
+  grid-area: card2;
+}
+.card3 {
+  grid-area: card3;
+}
+.card4 {
+  grid-area: card4;
+}
+
+.cards .icons {
+  width: 65px;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+  background-color: var(--primary-color);
+  border-radius: 16px;
+  margin-bottom: 48px;
+}
+
+.cards .card-title {
+  font-weight: 900;
+  color: var(--secondary-color);
+  font-size: 1.47rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  line-height: 1.8rem;
+}
+
+.cards p {
+  margin-top: 22px;
+  font-size: 1.01rem;
+  font-weight: 500;
+  color: var(--secondary-color-text);
+  line-height: 1.6rem;
+}
+
+footer {
+  height: 60px;
+  text-align: center;
+  padding-right: 1.8rem;
+}
+
+footer h3 {
+  color: var(--secondary-color-text);
+  font-weight: 700;
+  font-size: 1.03rem;
+}
+
+footer h3 span {
+  font-weight: 400;
+}
+
+/*------------small desktop-------------*/
+@media (max-width: 1298px) {
+  header {
+    padding: 54px 4rem;
+  }
+
+  .hero {
+    padding: 30px 4rem;
+  }
+
+  .information::after,
+  .hero::before {
+    display: none;
+  }
+
+  .hero-content {
+    padding-right: 2rem;
+  }
+
+  .information {
+    padding: 0 4rem;
+  }
+
+  .cards-keyboard {
+    padding: 169px 4rem 140px;
+  }
+}
+
+
+/*------------tablet-------------*/
+@media (max-width: 920px) {
+  header {
+    padding: 54px 2rem;
+  }
+
+  .hero {
+    padding: 30px 0 30px 2rem;
+    grid-template-columns: 1.3fr 1fr;
+    grid-template-areas: "area1 area2";
+  }
+
+  .hero-content {
+    padding-right: 1rem;
+  }
+
+  .hero-image {
+    background-image: url("../images/tablet/image-keyboard.jpg");
+    background-position: left;
+    border-radius: 20px 0 0 20px;
+  }
+
+  .information {
+    padding: 0 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2.5fr 1fr;
+    gap: 60px 30px;
+    grid-template-areas:
+      "info1 info2 info2"
+      "info3 info3 info3";
+  }
+
+  .information-image-orange {
+    height: auto;
+    background-image: url("../images/tablet/img-phone.png");
+  }
+  .information-image-center {
+    background-image: url("../images/tablet/image-glass-and-keyboard.jpg");
+  }
+
+  .information-text {
+    padding-left: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .information-text p {
+    max-width: 400px;
+  }
+
+  .cards-keyboard {
+    padding: 150px 2rem 140px;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4";
+  }
+
+  .cards {
+    padding-right: 2.9rem;
+  }
+
+  footer {
+    padding-right: 0;
+    height: 80px;
+  }
+}
+
+/*------------mobile-------------*/
+@media (max-width: 714px) {
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.7fr 1fr;
+    grid-template-areas:
+      "area1"
+      "area2";
+  }
+
+  .hero-content {
+    padding-right: 2rem;
+  }
+
+  .information {
+    padding: 0 2rem 0 0;
+  }
+
+  .information-image-orange {
+    border-radius: 0 20px 20px 0;
+  }
+
+  .information-text h2 {
+    padding-left: 2rem;
+    padding-right: 1rem;
+  }
+
+  .cards-keyboard {
+    padding: 120px 2rem 140px;
+  }
+
+  .cards {
+    padding-right: 0;
+  }
+}
+
+
+@media (max-width: 500px) {
+  header {
+    padding: 30px 1.5rem;
+  }
+
+  .hero {
+    padding: 30px 0 30px 24px;
+    grid-template-rows: 0.7fr 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--secondary-color);
+  }
+
+  .hero-content {
+    padding-right: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.97rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+  }
+
+  .hero-image {
+    height: auto;
+    background-image: url("../images/mobile/image-keyboard.jpg");
+    background-position: center;
+    border-radius: 20px 0 0 20px;
+  }
+
+  .link {
+    font-size: 1rem;
+    padding: 18px 15px;
+  }
+
+  .information {
+    padding: 0 1.5rem 0 0;
+    grid-template-rows: 1fr 1.2fr;
+    gap: 60px 24px;
+  }
+
+  .information-image-orange {
+    background-image: url("../images/mobile/img-phone.png");
+  }
+
+  .information-image-center {
+    background-image: url("../images/mobile/image-glass-and-keyboard.jpg");
+  }
+
+  .information-text {
+    flex-direction: column;
+    text-align: center;
+    padding-left: 1.5rem;
+  }
+
+  .information-text h2 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .information-text p {
+    padding-right: 0;
+  }
+
+  .cards-keyboard {
+    padding: 100px 1.48rem 140px;
+    gap: 3.4rem 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "card1"
+      "card2"
+      "card3"
+      "card4";
+  }
+
+  .cards {
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .cards .icons {
+    margin: 0 auto 48px;
+  }
+
+  footer {
+    height: 90px;
+  }
+
+}

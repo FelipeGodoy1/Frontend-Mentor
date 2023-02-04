@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+:root {
+  --blue: #5847eb;
+  --white: #fff;
+  --work:  linear-gradient(180deg, #ff8c66 52%, #1c1f4a 100%);
+  --play:  linear-gradient(180deg, #56c2e6 52%, #1c1f4a 100%);
+  --study:  linear-gradient(180deg, #ff5c7c 54%, #1c1f4a 100%);
+  --exercise: linear-gradient(180deg, #4acf81 52%, #1c1f4a 100%);
+  --social: linear-gradient(180deg, #7536d3 52%, #1c1f4a 100%);
+  --self-care: linear-gradient(180deg, #f1c65b 52%, #1c1f4a 100%);
+
+  --Very-dark-blue: #0f1424;
+  --Dark-blue: #1c1f4a;
+  --Desaturated-blue: #6f76c8;
+  --Pale-Blue: #bdc1ff;
+
+  --card-titles: 1.125rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--Very-dark-blue);
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: min(100% - 3rem, 1111px);
+  min-height: 519px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px 30px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "principal work play study"
+    "principal exercise social self-care";
+}
+
+.principal,
+.work,
+.play,
+.study,
+.exercise,
+.social,
+.self-care {
+  border-radius: 1rem;
+  position: relative;
+  overflow-y: hidden;
+}
+
+
+
+.work .icon,
+.social .icon,
+.self-care .icon {
+  position: absolute;
+  right: 1.1rem;
+  top: -12px;
+}
+
+
+.play .icon,
+.study .icon{
+  position: absolute;
+  right: 1.1rem;
+  top: -5px;
+}
+
+.exercise .icon {
+  position: absolute;
+  right: 1.1rem;
+  
+}
+
+.principal {
+  grid-area: principal;
+  background: var(--Dark-blue);
+}
+
+.work {
+  grid-area: work;
+  background: var(--work);
+}
+
+.play {
+  grid-area: play;
+  background: var(--play);
+}
+
+.study {
+  grid-area: study;
+  background: var(--study);
+}
+
+.exercise {
+  grid-area: exercise;
+  background: var(--exercise);
+}
+
+.social {
+  grid-area: social;
+  background: var(--social);
+}
+
+.self-care {
+  grid-area: self-care;
+  background: var(--self-care);
+}
+
+.profile {
+  width: 100%;
+  height: 353px;
+  background-color: var(--blue);
+  border-radius: 13px;
+  padding: 33px 30px;
+}
+
+.profile img {
+  height: 84px;
+  border: 3px solid var(--white);
+  border-radius: 100%;
+}
+
+.info {
+  padding-top: 33px;
+}
+
+.profile .info span {
+  color: var(--Pale-Blue);
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.profile .info h1 {
+  padding-top: 5px;
+  color: var(--white);
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
+.frequency {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 33px;
+}
+
+.frequency a {
+  margin-top: 23px;
+  color: var(--Desaturated-blue);
+  transition: 0.4s;
+  font-size: 1.1rem;
+}
+
+.frequency a:hover {
+  color: var(--Pale-Blue);
+  transition: all 0.3s;
+}
+
+.active {
+  color: var(--white) !important;
+}
+
+.content {
+  width: 100%;
+  min-height: 200px;
+  background: var(--Dark-blue);
+  border-radius: 13px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 30px;
+  transition: all 0.4s ease-in;
+}
+
+.content:hover {
+  background: var(--blue);
+  transition: all 0.2s ease-out;
+}
+
+.content .title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content .title h3 {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 1.12rem;
+}
+
+.content .hours .current {
+  font-weight: 300;
+  color: var(--white);
+  font-size: 3.4rem;
+  margin-top: 25px;
+  margin-bottom: 6px;
+}
+
+.content .hours .previous {
+  color: var(--Pale-Blue);
+  font-weight: 300;
+  font-size: 0.92rem;
+  letter-spacing: 0.3px;
+}
+
+.anima {
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
+
+/*------Responsividade para Tablet-------*/
+@media (max-width: 899px) {
+  main {
+    padding: 80px 0;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 24px 24px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "principal principal"
+      "work play"
+      "study exercise"
+      "social self-care";
+  }
+
+  .principal .work,
+  .play,
+  .study,
+  .exercise,
+  .social,
+  .self-care {
+    height: 244px;
+  }
+
+  .profile {
+    height: 150px;
+    display: flex;
+    padding: 0 30px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile .info {
+    padding-top: 0;
+    padding-left: 1rem;
+  }
+
+  .frequency {
+    flex-direction: row;
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  .frequency a {
+    font-size: 1.1rem;
+    margin-left: 3rem;
+  }
+
+  .frequency a:first-child {
+    margin-left: 0;
+  }
+}
+
+
+
+/*------Responsividade Mobile-------*/
+@media (max-width: 575px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "principal"
+      "work"
+      "play"
+      "study"
+      "exercise"
+      "social"
+      "self-care";
+  }
+
+  .principal .work,
+  .play,
+  .study,
+  .exercise,
+  .social,
+  .self-care {
+    height: 204px;
+  }
+
+  .profile {
+    height: 133px;
+    justify-content: flex-start;
+  }
+
+  .profile .info span {
+    font-size: 0.81rem;
+  }
+
+  .profile .info h1 {
+    font-size: 1.35rem;
+  }
+
+  .frequency {
+    flex-direction: row;
+    padding-left: 0;
+    padding: 0 30px;
+    justify-content: center;
+    justify-content: space-around;
+  }
+
+  .frequency a {
+    font-size: 1rem;
+    margin-left: 0;
+  }
+
+  .content {
+    min-height: 164px;
+  }
+
+  .content .hours {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 25px;
+  }
+
+  .content .hours .current {
+    font-weight: 300;
+    color: var(--white);
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .content .hours .previous {
+    font-size: 0.85rem;
+  }
+  
+}

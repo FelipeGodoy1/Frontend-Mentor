@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+:root {
+--main-background: hsl(222, 26%, 31%);
+--keypad-background: hsl(223, 31%, 20%);
+--screen-background: hsl(224, 36%, 15%);
+
+--color-button-reset: hsl(224, 21%, 50%);
+--color-button-reset-shadow: hsl(222, 26%, 31%);
+--color-button-reset-active: hsl(224, 51%, 76%);
+
+--Text-button-color: hsl(221, 14%, 31%);
+--White: hsl(0, 0%, 100%);
+
+--Text-button-equal: hsl(0, 0%, 100%);
+--Color-button-equal: hsl(6, 63%, 50%);
+--Dark-color-button-equal: hsl(6, 70%, 34%);
+--color-button-equal-active: hsl(6, 93%, 67%);
+
+--Button-numbers: hsl(30, 25%, 89%);
+--Shadow-button-numbers: hsl(28, 16%, 65%);
+--Button-numbers-active: hsl(0, 0%, 100%);
+
+--display--color-text: hsl(0, 0%, 100%);
+}
+
+
+.theme-2 {
+--main-background: hsl(0, 0%, 90%);
+--keypad-background: hsl(0, 5%, 81%);
+--screen-background: hsl(0, 0%, 93%);
+
+--color-button-reset: hsl(185, 42%, 37%);
+--color-button-reset-shadow: hsl(185, 58%, 25%);
+--color-button-reset-active: hsl(185, 41%, 56%);
+
+--Text-button-color: hsl(221, 14%, 31%);
+--White: hsl(0, 0%, 100%);
+
+--Text-button-equal: hsl(0, 0%, 100%);
+--Color-button-equal: hsl(25, 98%, 40%);
+--Dark-color-button-equal: hsl(25, 99%, 27%);
+--color-button-equal-active: hsl(25, 100%, 61%);
+
+--Button-numbers: hsl(45, 7%, 89%);
+--Shadow-button-numbers: hsl(35, 11%, 61%);
+--Button-numbers-active: hsl(0, 0%, 100%);
+
+--display--color-text: hsl(221, 14%, 31%);
+}
+
+.theme-3 {
+  --main-background: hsl(268, 75%, 9%);
+  --keypad-background: hsl(268, 71%, 12%);
+  --screen-background: hsl(268, 71%, 12%);
+  
+  --color-button-reset: hsl(281, 89%, 26%);
+  --color-button-reset-shadow: hsl(285, 91%, 52%);
+  --color-button-reset-active: hsl(280, 56%, 44%);
+  
+  --Text-button-color: hsl(52, 100%, 62%);
+  --White: hsl(0, 0%, 100%);
+  
+  --Text-button-equal: #00000;
+  --Color-button-equal: hsl(176, 100%, 44%);
+  --Dark-color-button-equal: hsl(177, 92%, 70%);
+  --color-button-equal-active: hsl(177, 100%, 79%);
+  
+  --Button-numbers: hsl(268, 47%, 21%);
+  --Shadow-button-numbers: hsl(290, 70%, 36%);
+  --Button-numbers-active: hsl(268, 54%, 44%);
+  
+  --display--color-text: hsl(52, 100%, 62%);
+  }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--main-background);
+}
+
+main {
+  width: min(100% - 48px, 540px);
+}
+
+button {
+  font-size: 1.6rem;
+  padding: 14px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.themes {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.themes h1 {
+  font-size: 1.5rem;
+  color: var(--display--color-text);
+}
+
+
+.numbers {
+  display: flex;
+  justify-content: space-around;
+}
+
+.numbers span {
+  font-size: 16px;
+  color: var(--display--color-text);
+}
+
+.toggle {
+  width: 70px;
+  height: 26px;
+  background-color: var(--keypad-background);
+  border-radius: 15px;
+  padding: 4px;
+  display: flex;
+  gap: 3px;
+  position: relative;
+}
+
+.toggle::before {
+  content: 'THEMES';
+  position: absolute;
+  top: 5px;
+  left: -70px;
+  font-size: 16px;
+  color: var(--display--color-text);
+}
+
+.circle {
+  height: 100%;
+  flex: 1;
+  padding: 5px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.circle.active {
+  background-color: var(--Color-button-equal);
+}
+
+.display {
+  width: 100%;
+  margin-top: 1.3rem;
+  background-color: var(--screen-background);
+  text-align: end;
+  padding: 38px 34px;
+  color: var(--display--color-text);
+  border-radius: 10px;
+  font-size: 2.3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.container-buttons {
+  background-color: var(--keypad-background);
+  padding: 30px;
+  margin-top: 24px;
+  border-radius: 10px;
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+  gap: 25px 25px; 
+  grid-template-areas: 
+    "button-7 button-8 button-9 delete"
+    "button-4 button-5 button-6 more"
+    "button-1 button-2 button-3 less"
+    "dot button-0 division multiplication"
+    "reset reset equal equal";
+}
+
+#reset { grid-area: reset; }
+#equal { grid-area: equal; }
+#delete { grid-area: delete; }
+#more { grid-area: more; }
+#less { grid-area: less; }
+#multiplication { grid-area: multiplication; }
+#division { grid-area: division; }
+#dot { grid-area: dot; }
+#button-0 { grid-area: button-0; }
+#button-1 { grid-area: button-1; }
+#button-2 { grid-area: button-2; }
+#button-3 { grid-area: button-3; }
+#button-4 { grid-area: button-4; }
+#button-5 { grid-area: button-5; }
+#button-6 { grid-area: button-6; }
+#button-7 { grid-area: button-7; }
+#button-8 { grid-area: button-8; }
+#button-9 { grid-area: button-9; }
+
+#reset,
+#delete {
+  font-size: 1.1rem;
+  background-color: var(--color-button-reset);
+  color: var(--White);
+  box-shadow: 0 5px 0 0 var(--color-button-reset-shadow);
+}
+
+#reset:active,
+#delete:active {
+  background-color: var(--color-button-reset-active);
+}
+
+.botao {
+  background-color: var(--Button-numbers);
+  color: var(--Text-button-color);
+  box-shadow: 0 5px 0 0 var(--Shadow-button-numbers);
+}
+
+.botao:active {
+  background-color: var(--Button-numbers-active);
+}
+
+#equal {
+  background-color: var(--Color-button-equal);
+  box-shadow: 0 5px 0 0 var(--Dark-color-button-equal);
+  color: var(--Text-button-equal);
+}
+
+#equal:active {
+  background-color: var(--color-button-equal-active);
+}
+
+@media (max-width: 536px) {
+  
+  .display {
+    padding: 30px;
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 1.3rem;
+  }
+
+  .container-buttons {
+    background-color: var(--keypad-background);
+    padding: 25px;
+    margin-top: 24px;
+    border-radius: 10px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+    gap: 18px 13px; 
+  }
+  #equal,
+  #reset,
+  #delete {
+    font-size: 0.9rem;
+  }
+}
