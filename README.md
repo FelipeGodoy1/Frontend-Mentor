@@ -1,6 +1,6 @@
 # Frontend Mentor - Resolutions
 
-![Design preview for template frontend mentor](./image-readme/layout.png)
+![Design preview for template frontend mentor](./IMAGE-README/layout.png)
 
 ## Welcome! 🚀
 
