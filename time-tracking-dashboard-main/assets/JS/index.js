@@ -51,14 +51,7 @@ frequencyDate.forEach((element, index) => {
   })
 })
 
-function animate() {
-  anima.forEach((box, index) => {
-    setTimeout(()=>{
-      box.style.opacity = 1
-    }, 300 * index)
-  });
-}
-window.addEventListener('load', animate)
+
 
 
 

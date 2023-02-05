@@ -217,11 +217,6 @@ main {
   letter-spacing: 0.3px;
 }
 
-.anima {
-  opacity: 0;
-  transition: all 0.3s linear;
-}
-
 
 /*------Responsividade para Tablet-------*/
 @media (max-width: 899px) {
